@@ -1,5 +1,7 @@
 # Singapore AML Fraud Detection & Risk Compliance Analysis (PaySim)
 
+![Project cover](.github/cover.png)
+
 End-to-end AML / fraud detection and compliance analysis pipeline on the **PaySim** synthetic
 mobile-money dataset (6,362,620 transactions, 0.13% fraud), benchmarked against Singapore
 **MAS Notice 626 / PDPA / FSMA**.
