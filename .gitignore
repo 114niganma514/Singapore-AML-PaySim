@@ -1,0 +1,8 @@
+# Large data files (PaySim ~470MB raw, intermediates >1GB) - download separately
+test_data/*.csv
+*.zip
+# Large model artefacts (>50MB)
+model/rf_model.pkl
+__pycache__/
+*.pyc
+.venv/

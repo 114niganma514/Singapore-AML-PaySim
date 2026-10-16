@@ -1,0 +1,29 @@
+======================================================================
+XGBoost Hyperparameter Tuning Report (Step 09)
+======================================================================
+Search space: max_depth x learning_rate x n_estimators on 572,635 rows
+Best params: {'max_depth': 5, 'learning_rate': 0.05, 'n_estimators': 150} (validation AUC = 0.9736)
+
+Grid search results (sorted by validation AUC):
+  depth=5 lr=0.05 est=150 -> 0.9736
+  depth=5 lr=0.05 est=250 -> 0.9724
+  depth=7 lr=0.05 est=150 -> 0.9713
+  depth=5 lr=0.1 est=150 -> 0.97
+  depth=7 lr=0.05 est=250 -> 0.9692
+  depth=5 lr=0.1 est=250 -> 0.9678
+  depth=7 lr=0.1 est=150 -> 0.9663
+  depth=7 lr=0.1 est=250 -> 0.9653
+
+Final model on held-out test set:
+  Precision: 0.025
+  Recall:    0.913
+  F1-Score:  0.0487
+  AUC:       0.9813
+  PR-AUC:    0.5309
+  Default t=0.5: P=0.025 R=0.913 F1=0.0487
+  Best-F1 threshold = 0.98: P=0.4714 R=0.5222 F1=0.4955
+  High-recall threshold (R>=0.95) = 0.26: P=0.01 R=0.9501 F1=0.0199
+
+Comparison with step-08 default XGBoost (depth6 lr0.1 est200):
+  Step-08 XGB: P=0.0352 R=0.8917 F1=0.0678 AUC=0.9817 PR-AUC=0.6151
+  Step-09 XGB: P=0.025 R=0.913 F1=0.0487 AUC=0.9813 PR-AUC=0.5309

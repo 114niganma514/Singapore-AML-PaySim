@@ -1,0 +1,34 @@
+============================================================
+Anti‑Fraud Risk Control Model Evaluation Report
+============================================================
+Core evaluation principle: Financial risk control prioritizes recall rate to reduce undetected fraud cases
+
+[1] Hard‑rule Baseline (Amount > 200000)
+Precision: 0.0032
+Recall: 0.6598
+F1‑Score: 0.0064
+Business interpretation: Pure rule‑based approach yields relatively low recall, numerous medium‑ and small‑value fraud cases will be missed.
+
+[2] Logistic Regression Model
+Confusion Matrix:
+TN=1125617  FP=145264
+FN=514  TP=1129
+Precision: 0.0077
+Recall: 0.6872
+F1‑Score: 0.0153
+AUC: 0.8357
+
+[3] Random Forest Model
+Confusion Matrix:
+TN=1212536  FP=58345
+FN=153  TP=1490
+Precision: 0.0249
+Recall: 0.9069
+F1‑Score: 0.0485
+AUC: 0.9794
+
+[4] Business Conclusions and Optimization Directions
+1. Machine‑learning models achieve substantially higher fraud recall compared with pure rule‑based methods.
+2. Tree‑based models outperform linear models and capture non‑linear risk features more effectively.
+3. Threshold tuning can balance precision and recall: lower the threshold under strict regulatory scenarios to improve recall.
+4. Future optimization directions: add time‑series rolling features, incorporate graph‑relationship features, adopt XGBoost / LightGBM algorithms.

@@ -1,0 +1,62 @@
+{
+  "n_total": 6362620,
+  "total_amount": 1144392944759.77,
+  "fraud_count": 8213,
+  "fraud_ratio": 0.1291,
+  "fraud_amount": 12056415427.84,
+  "flagged_count": 16,
+  "type_stats": [
+    {
+      "type": "CASH_IN",
+      "count": 1399284,
+      "amount": 236367391912.46,
+      "fraud": 0
+    },
+    {
+      "type": "CASH_OUT",
+      "count": 2237500,
+      "amount": 394412995224.49,
+      "fraud": 4116
+    },
+    {
+      "type": "DEBIT",
+      "count": 41432,
+      "amount": 227199221.28,
+      "fraud": 0
+    },
+    {
+      "type": "PAYMENT",
+      "count": 2151495,
+      "amount": 28093371138.37,
+      "fraud": 0
+    },
+    {
+      "type": "TRANSFER",
+      "count": 532909,
+      "amount": 485291987263.17,
+      "fraud": 4097
+    }
+  ],
+  "large_trans_10k_count": 2691568,
+  "large_trans_10k_ratio": 42.3028,
+  "large_trans_10k_amount": 879309143687.57,
+  "large_trans_200k_count": 1673570,
+  "large_trans_200k_ratio": 26.3032,
+  "risk_tx_high": 8213,
+  "risk_tx_medium": 3159534,
+  "risk_tx_low": 3194873,
+  "risk_tx_high_ratio": 0.1291,
+  "risk_tx_medium_ratio": 49.6578,
+  "risk_tx_low_ratio": 50.2132,
+  "acct_high": 8213,
+  "acct_medium": 3157246,
+  "acct_low": 3187848,
+  "acct_total": 6353307,
+  "suspicious_count": 1676312,
+  "str_count": 1676312,
+  "struct_accounts": 0,
+  "struct_tx": 0,
+  "fund_agg_dest_count": 280200,
+  "fund_agg_total_amount": 984985403086.82,
+  "balance_mismatch_count": 4996853
+}

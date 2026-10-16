@@ -1,0 +1,12 @@
+PaySim Mobile Financial Fraud Dataset Data Profiling Report
+==================================================
+Total rows: 6362620  |  Total columns: 11
+Fraud sample ratio: 0.1291 %
+
+Fraud count by transaction type:
+type
+CASH_OUT    4116
+TRANSFER    4097
+CASH_IN        0
+DEBIT          0
+PAYMENT        0

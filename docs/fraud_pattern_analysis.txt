@@ -1,0 +1,27 @@
+============================================================
+PaySim Fraudulent Transaction Behavior Pattern Analysis Report
+============================================================
+
+[1] Fraudulent Transaction Type Distribution
+type
+CASH_OUT    4116
+TRANSFER    4097
+Conclusion: 100% of fraud cases are concentrated in ['CASH_OUT', 'TRANSFER'] transaction types; no fraud exists in other transaction types.
+
+[2] Normal vs Fraudulent Transaction Amount Comparison
+Average amount of normal transactions: 178197.04
+Average amount of fraudulent transactions: 1467967.3
+The average amount of fraudulent transactions is 8.24 times that of normal transactions.
+
+[3] 24‑Hour Distribution of Fraudulent Transactions
+Peak fraud hour: 10 o'clock, total 375 transactions
+Fraud proportion is significantly higher during early‑morning hours than working hours.
+
+[4] Beneficiary Types of Fraudulent Transactions
+Merchant beneficiary proportion among fraudulent transactions: 0.0%
+Conclusion: Almost all fraud funds flow to personal accounts; merchant accounts have almost no fraud activity.
+
+[5] Large‑value Rule (>200000) Hit Statistics
+Large‑value proportion within fraudulent transactions: 66.61%
+Large‑value proportion within normal transactions: 26.25%
+Large‑value transaction is a strong fraud indicator. However, relying solely on the large‑value rule will miss a large number of medium‑ and small‑value fraud cases.

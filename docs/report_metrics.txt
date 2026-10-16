@@ -1,0 +1,26 @@
+AML Report Metrics (computed from cleaned_paysim.csv)
+============================================================
+Total transactions: 6,362,620
+Total amount (SGD): 1,144,392,944,759.77
+Fraud transactions: 8,213 (0.1291%)
+Fraud amount (SGD): 12,056,415,427.84
+isFlaggedFraud count: 16
+
+Transaction type statistics:
+  CASH_IN: count=1,399,284, amount=236,367,391,912.46, fraud=0
+  CASH_OUT: count=2,237,500, amount=394,412,995,224.49, fraud=4,116
+  DEBIT: count=41,432, amount=227,199,221.28, fraud=0
+  PAYMENT: count=2,151,495, amount=28,093,371,138.37, fraud=0
+  TRANSFER: count=532,909, amount=485,291,987,263.17, fraud=4,097
+
+Large-value (TRANSFER/CASH_OUT >= 10k): count=2,691,568 (42.3028%), amount=879,309,143,687.57
+Large-value (amount > 200k): count=1,673,570 (26.3032%)
+
+Risk tier (transactions): High=8,213 (0.1291%), Medium=3,159,534 (49.6578%), Low=3,194,873 (50.2132%)
+Risk tier (accounts): High=8,213, Medium=3,157,246, Low=3,187,848, Total=6,353,307
+
+Suspicious transactions (fraud | flagged | >200k): 1,676,312
+STR candidate count: 1,676,312
+Structuring proxy: 0 accounts, 0 small transactions
+Fund aggregation destinations (>=3 sources & >=5 tx): 280,200, total amount 984,985,403,086.82
+Balance mismatch (normal tx): 4,996,853

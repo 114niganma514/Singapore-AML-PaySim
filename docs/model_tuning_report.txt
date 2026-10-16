@@ -1,0 +1,75 @@
+======================================================================
+Model Comparison & Threshold Tuning Report (Step 08)
+======================================================================
+Test set: 1272524 transactions, fraud ratio 0.1291%
+Core principle: financial risk control prioritizes recall to reduce undetected fraud.
+
+[Logistic Regression]
+  Precision: 0.0077
+  Recall:    0.6872
+  F1-Score:  0.0153
+  AUC:       0.8357
+
+[Random Forest]
+  Precision: 0.0249
+  Recall:    0.9069
+  F1-Score:  0.0485
+  AUC:       0.9794
+
+[XGBoost]
+  Precision: 0.0352
+  Recall:    0.8917
+  F1-Score:  0.0678
+  AUC:       0.9817
+
+======================================================================
+Threshold Tuning (RF vs XGBoost)
+======================================================================
+
+[Random Forest] Precision / Recall / F1 by threshold
+  Threshold   Precision   Recall    F1
+  0.20        0.0052     0.9744    0.0104
+  0.30        0.0139     0.9312    0.0273
+  0.40        0.0198     0.9191    0.0388
+  0.50        0.0249     0.9069    0.0485
+  0.60        0.0316     0.8862    0.0610
+  0.80        0.1093     0.7358    0.1903
+  0.90        0.2524     0.6044    0.3561
+
+  >> Default threshold (0.50):
+       P=0.0249 R=0.9069 F1=0.0485
+  >> Best-F1 threshold = 0.96: P=0.4612 R=0.4486 F1=0.4548
+  >> High-recall threshold (R>=0.95) = 0.24: P=0.0093 R=0.9501 F1=0.0183
+
+[XGBoost] Precision / Recall / F1 by threshold
+  Threshold   Precision   Recall    F1
+  0.20        0.0114     0.9446    0.0225
+  0.30        0.0184     0.9245    0.0362
+  0.40        0.0260     0.9063    0.0506
+  0.50        0.0352     0.8917    0.0678
+  0.60        0.0482     0.8752    0.0914
+  0.80        0.1102     0.8065    0.1939
+  0.90        0.2031     0.7511    0.3197
+
+  >> Default threshold (0.50):
+       P=0.0352 R=0.8917 F1=0.0678
+  >> Best-F1 threshold = 0.98: P=0.5127 R=0.6147 F1=0.5591
+  >> High-recall threshold (R>=0.95) = 0.17: P=0.0094 R=0.9507 F1=0.0186
+
+======================================================================
+Precision-Recall Summary
+======================================================================
+  Logistic Regression: PR-AUC = 0.0305
+  Random Forest: PR-AUC = 0.4366
+  XGBoost: PR-AUC = 0.6151
+
+======================================================================
+Business Conclusions & Recommendations
+======================================================================
+1. XGBoost achieves the best balance of recall and precision among the three models.
+2. Threshold tuning can materially improve the recall-precision trade-off:
+   - Default 0.5 favors precision but may miss fraud; a lower threshold is preferred.
+   - Under strict regulatory (AML) scenarios, a high-recall threshold (R>=0.95) is recommended
+     to minimize undetected fraud, accepting more false positives for manual review.
+3. Recommendation: deploy XGBoost with a tuned threshold, and route flagged cases to
+   the STR/review workflow rather than relying on the raw 0.5 cut-off.

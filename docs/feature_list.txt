@@ -1,0 +1,27 @@
+List of Modelling Features (Total: 25)
+========================================
+step
+amount
+isFlaggedFraud
+hour_of_day
+day_of_month
+is_merchant_dest
+is_large_amount
+amount_log
+amount_level
+type_CASH_IN
+type_CASH_OUT
+type_DEBIT
+type_PAYMENT
+type_TRANSFER
+is_midnight
+weekday
+is_weekend
+orig_total_count
+orig_total_amount
+orig_avg_amount
+orig_max_amount
+orig_type_nunique
+dest_total_count
+dest_total_amount
+dest_avg_amount
