@@ -34,8 +34,7 @@ test_data/    00_convert_csv.py (data files not committed)
 
 Data is **not** included (raw ~470MB, intermediates >1GB; GitHub limit is 100MB/file).
 Download PaySim from Kaggle (`ealaxi/paysim1`), save it as `test_data/paysim_raw.csv`,
-then run the scripts in order. Note: `scripts/09_xgb_hyperparam.py` uses an absolute
-base path (`D:\Singapore_AML_RiskCompliance_PaySim`) - change it to your local path.
+then run the scripts in order.
 
 ## Tech stack
 Python, pandas, NumPy, scikit-learn, XGBoost, Matplotlib

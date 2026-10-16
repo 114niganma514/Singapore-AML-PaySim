@@ -20,7 +20,8 @@ plt.rcParams["font.family"] = "Arial"
 plt.rcParams["axes.unicode_minus"] = False
 plt.rcParams["figure.dpi"] = 150
 
-base = r"D:\Singapore_AML_RiskCompliance_PaySim"
+# Project root = parent of this scripts/ folder (portable, no hard-coded drive path)
+base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 t0 = time.time()
 
 # ---------- 1. Load data & reproduce the same split as 05/08 ----------
