@@ -8,7 +8,8 @@ mobile-money dataset (6,362,620 transactions, 0.13% fraud), benchmarked against 
 
 | Model / operating point | AUC | PR-AUC | Precision | Recall | F1 |
 |---|---|---|---|---|---|
-| Random Forest (t=0.5) | - | - | 0.025 | 0.907 | 0.049 |
+| Logistic Regression (t=0.5) | 0.836 | 0.031 | 0.008 | 0.687 | 0.015 |
+| Random Forest (t=0.5) | 0.979 | 0.437 | 0.025 | 0.907 | 0.049 |
 | XGBoost (t=0.5) | 0.982 | 0.615 | 0.035 | 0.892 | 0.068 |
 | XGBoost, best-F1 threshold (t=0.98) | | | 0.513 | 0.615 | **0.559** |
 | XGBoost, high-recall screening point (t=0.17) | | | 0.009 | 0.951 | 0.019 |
@@ -26,7 +27,8 @@ scripts/      01_profile -> 02_clean -> 03_features -> 04_patterns -> 05_model
 docs/         reports and metrics
 charts/       figures
 model/        LR / XGBoost models (Random Forest .pkl excluded, 45MB - regenerate with 05)
-references/   MAS / PDPA / FSMA notes, KYC, glossary
+references/   MAS / PDPA / FSMA notes, metric definitions, glossary
+WORKFLOW.md   step-by-step analysis methodology
 assets/       compliance analysis report
 test_data/    00_convert_csv.py (data files not committed)
 ```

@@ -1,14 +1,6 @@
----
-name: risk-compliance-analysis
-description: >
-  End-to-end risk and compliance analysis for transactional datasets,
-  including data profiling, cleaning & anonymization, risk feature engineering,
-  multi-dimensional risk segmentation, regulatory compliance checks, visualization,
-  metric validation, and auditable business insights reports.
-  Designed to align with Singapore MAS AML/CFT requirements and FinTech compliance standards.
----
+# Analysis Workflow
 
-# Workflow
+End-to-end risk & compliance analysis workflow for this project, aligned with Singapore MAS AML/CFT requirements.
 
 0.  **Raw Data Conversion** *(only if the original Kaggle file is present)*
     - Run `test_data/00_convert_csv.py` from the `test_data/` directory to convert
